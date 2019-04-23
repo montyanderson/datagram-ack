@@ -4,7 +4,8 @@
   "description": "Send UDP datagram packets reliably",
   "main": "index.js",
   "scripts": {
-    "test": "jest test.js --forceExit"
+    "test": "jest test.js --forceExit",
+	"coverage": "jest --forceExit --coverage",
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/montyanderson/datagram-ack#readme",
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "jest": "^24.7.1"
   }
 }
