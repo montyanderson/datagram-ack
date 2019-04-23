@@ -1,0 +1,22 @@
+{
+  "name": "datagram-ack",
+  "version": "1.0.0",
+  "description": "Send UDP datagram packets reliably",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test.js --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montyanderson/datagram-ack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/montyanderson/datagram-ack/issues"
+  },
+  "homepage": "https://github.com/montyanderson/datagram-ack#readme",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}

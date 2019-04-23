@@ -1,11 +1,11 @@
 const crypto = require('crypto');
 const EventEmitter = require('events');
 
-class Socket extends EventEmitter {
+module.exports = class Socket extends EventEmitter {
 	constructor(rawSocket) {
 		super();
 
-		this.rawSend = rawSocket.send.bind(this);
+		this.rawSend = rawSocket.send.bind(rawSocket);
 		rawSocket.on('message', this.handleMessage.bind(this));
 
 		this.timeout = 50;
@@ -38,7 +38,9 @@ class Socket extends EventEmitter {
 				id
 			]);
 
-			this.rawSend(rawMsg, port, address);
+			this.rawSend(reply, port, address);
+
+			this.emit('message', msg);
 		}
 
 		// recieved ack
